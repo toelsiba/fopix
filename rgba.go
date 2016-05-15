@@ -13,8 +13,8 @@ func (f *Font) drawBitmapRGBA(m *image.RGBA, pos image.Point, bm *bitmap.Bitmap)
 	colorData := []byte{q.R, q.G, q.B, q.A}
 
 	var (
-		nX = f.fontSize.Dx
-		nY = f.fontSize.Dy
+		nX = f.size.Dx
+		nY = f.size.Dy
 	)
 
 	if f.scale == 1 {

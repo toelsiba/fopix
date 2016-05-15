@@ -11,13 +11,13 @@ type FontInfo struct {
 	Name        string
 	Author      string
 	Description string
-	Size        FontSize
+	Size        Size
 	AnchorPos   image.Point
 	TargetChar  Character
 	CharSet     []RuneInfo
 }
 
-type FontSize struct {
+type Size struct {
 	Dx, Dy int
 }
 

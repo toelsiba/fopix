@@ -16,30 +16,22 @@ type ColorSetter interface {
 }
 
 type Font struct {
-	fontSize FontSize
-	scale    int
-	c        color.Color
-	m        map[rune]*bitmap.Bitmap
+	size  Size
+	scale int
+	c     color.Color
+	m     map[rune]*bitmap.Bitmap
 }
 
 func New(fi FontInfo) (*Font, error) {
-	m := make(map[rune]*bitmap.Bitmap)
-	for _, ri := range fi.CharSet {
-		r := rune(ri.Character)
-		if _, ok := m[r]; ok {
-			return nil, fmt.Errorf("duplicate rune '%c'", r)
-		}
-		bm, err := newBitmapFromLines(ri.Bitmap, rune(fi.TargetChar), fi.AnchorPos, fi.Size)
-		if err != nil {
-			return nil, err
-		}
-		m[r] = bm
+	m, err := newMapFromFontInfo(fi)
+	if err != nil {
+		return nil, err
 	}
 	return &Font{
-		fontSize: fi.Size,
-		scale:    1,
-		c:        color.Black,
-		m:        m,
+		size:  fi.Size,
+		scale: 1,
+		c:     color.Black,
+		m:     m,
 	}, nil
 }
 
@@ -60,10 +52,26 @@ func NewFromFile(fileName string) (*Font, error) {
 	return New(fi)
 }
 
-func newBitmapFromLines(lines []string, target rune, pos image.Point, fs FontSize) (*bitmap.Bitmap, error) {
+func newMapFromFontInfo(fi FontInfo) (map[rune]*bitmap.Bitmap, error) {
+	m := make(map[rune]*bitmap.Bitmap)
+	for _, ri := range fi.CharSet {
+		r := rune(ri.Character)
+		if _, ok := m[r]; ok {
+			return nil, fmt.Errorf("duplicate rune '%c'", r)
+		}
+		bm, err := newBitmapFromLines(ri.Bitmap, rune(fi.TargetChar), fi.AnchorPos, fi.Size)
+		if err != nil {
+			return nil, err
+		}
+		m[r] = bm
+	}
+	return m, nil
+}
+
+func newBitmapFromLines(lines []string, target rune, pos image.Point, size Size) (*bitmap.Bitmap, error) {
 	var (
-		nX = fs.Dx
-		nY = fs.Dy
+		nX = size.Dx
+		nY = size.Dy
 	)
 	bm, err := bitmap.New(nX * nY)
 	if err != nil {
@@ -104,12 +112,6 @@ func (f *Font) Scale(scale int) {
 
 func (f *Font) GetScale() int {
 	return f.scale
-}
-
-func (f *Font) Size() (width, height int) {
-	width = f.fontSize.Dx * f.scale
-	height = f.fontSize.Dy * f.scale
-	return
 }
 
 func (f *Font) Color(c color.Color) {
@@ -153,8 +155,8 @@ func (f *Font) GetTextBounds(text string) image.Rectangle {
 	}
 
 	var (
-		x1 = f.fontSize.Dx * f.scale * maxX
-		y1 = f.fontSize.Dy * f.scale * maxY
+		x1 = f.size.Dx * f.scale * maxX
+		y1 = f.size.Dy * f.scale * maxY
 	)
 
 	return image.Rect(0, 0, x1, y1)
@@ -164,7 +166,8 @@ func (f *Font) DrawText(cs ColorSetter, pos image.Point, text string) {
 
 	data := []byte(text)
 
-	sizeX, sizeY := f.Size()
+	sizeX := f.size.Dx * f.scale
+	sizeY := f.size.Dy * f.scale
 
 	x := 0
 	y := 0
@@ -202,6 +205,7 @@ func (f *Font) DrawRune(cs ColorSetter, pos image.Point, r rune) {
 	if !ok {
 		return
 	}
+
 	if m, ok := cs.(*image.RGBA); ok {
 		f.drawBitmapRGBA(m, pos, bm)
 	} else {
@@ -212,8 +216,8 @@ func (f *Font) DrawRune(cs ColorSetter, pos image.Point, r rune) {
 func (f *Font) drawBitmap(cs ColorSetter, pos image.Point, bm *bitmap.Bitmap) {
 
 	var (
-		nX = f.fontSize.Dx
-		nY = f.fontSize.Dy
+		nX = f.size.Dx
+		nY = f.size.Dy
 	)
 
 	if f.scale == 1 {

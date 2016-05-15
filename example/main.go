@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"image"
 	"image/color"
+	"image/draw"
 	"image/png"
 	"log"
 	"os"
@@ -61,7 +62,8 @@ func fillImage(m *image.RGBA, c color.Color) {
 	}
 }
 
-func main() {
+func test1() {
+
 	f, err := fopix.NewFromFile(fontTomThumbNew)
 	if err != nil {
 		log.Fatal(err)
@@ -90,4 +92,39 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+}
+
+func test2() {
+
+	m1 := image.NewRGBA(image.Rect(0, 0, 300, 100))
+	bgColor := color.RGBA{255, 255, 0, 255}
+	draw.Draw(m1, m1.Bounds(), &image.Uniform{bgColor}, image.ZP, draw.Src)
+
+	text := "Hello, World!"
+
+	f, err := fopix.NewFromFile(fontTomThumbNew)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	f.Scale(5)
+	f.Color(color.RGBA{0, 0, 255, 100})
+
+	m2 := image.NewRGBA(f.GetTextBounds(text))
+
+	f.DrawText(m2, image.Point{0, 0}, text)
+
+	draw.Draw(m1, m1.Bounds(), m2, image.Point{0, 0}, draw.Over)
+
+	cc := color.RGBAModel.Convert(m1.At(0, 6)).(color.RGBA)
+	log.Println(cc)
+
+	err = imageSaveToPNG("test.png", m1)
+	if err != nil {
+		log.Fatal(err)
+	}
+}
+
+func main() {
+	test1()
 }
