@@ -64,7 +64,7 @@ func fillImage(m *image.RGBA, c color.Color) {
 
 func test1() {
 
-	f, err := fopix.NewFromFile(fontTomThumbNew)
+	f, err := fopix.NewFromFile(fontMiniwi)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -97,7 +97,8 @@ func test1() {
 func test2() {
 
 	m1 := image.NewRGBA(image.Rect(0, 0, 300, 100))
-	bgColor := color.RGBA{255, 255, 0, 255}
+
+	bgColor := color.RGBA{255, 255, 255, 255}
 	draw.Draw(m1, m1.Bounds(), &image.Uniform{bgColor}, image.ZP, draw.Src)
 
 	text := "Hello, World!"

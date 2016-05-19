@@ -73,10 +73,7 @@ func newBitmapFromLines(lines []string, target rune, pos image.Point, size Size)
 		nX = size.Dx
 		nY = size.Dy
 	)
-	bm, err := bitmap.New(nX * nY)
-	if err != nil {
-		return nil, err
-	}
+	bm := bitmap.New(nX * nY)
 	for iY := 0; iY < nY; iY++ {
 		if iY >= len(lines) {
 			break
@@ -201,6 +198,7 @@ func (f *Font) DrawText(cs ColorSetter, pos image.Point, text string) {
 }
 
 func (f *Font) DrawRune(cs ColorSetter, pos image.Point, r rune) {
+
 	bm, ok := f.m[r]
 	if !ok {
 		return

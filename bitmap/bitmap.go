@@ -9,15 +9,15 @@ type Bitmap struct {
 	data []byte
 }
 
-func New(size int) (*Bitmap, error) {
-	if size < 0 {
-		return nil, errors.New("bitmap: wrong size for create")
+func New(size int) *Bitmap {
+	if size <= 0 {
+		return &Bitmap{}
 	}
 	n, rem := quoRem(size, 8)
 	if rem > 0 {
 		n++
 	}
-	return &Bitmap{size, make([]byte, n)}, nil
+	return &Bitmap{size, make([]byte, n)}
 }
 
 func (bm *Bitmap) Size() int {

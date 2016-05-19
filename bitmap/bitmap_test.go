@@ -12,10 +12,7 @@ func TestBitmap(t *testing.T) {
 	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 
 	n := r.Intn(1000)
-	bm, err := New(n)
-	if err != nil {
-		t.Fatal(err)
-	}
+	bm := New(n)
 
 	for i := 0; i < n; i++ {
 		if err := bm.Set(i, randBool(r)); err != nil {
@@ -24,6 +21,7 @@ func TestBitmap(t *testing.T) {
 	}
 
 	var bit, bitInvert bool
+	var err error
 
 	data := make([]byte, len(bm.data))
 
