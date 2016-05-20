@@ -21,6 +21,7 @@ const (
 	fontDigits3x3   = "../fonts/digits3x3.json"
 	fontDigits3x4   = "../fonts/digits3x4.json"
 	fontDigits3x5   = "../fonts/digits3x5.json"
+	fontPixefon4x5  = "../fonts/pixefon-4x5.json"
 )
 
 var textMultiline = `During the 20th century, the field of professional astronomy
@@ -64,7 +65,7 @@ func fillImage(m *image.RGBA, c color.Color) {
 
 func test1() {
 
-	f, err := fopix.NewFromFile(fontMiniwi)
+	f, err := fopix.NewFromFile(fontPixefon4x5)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -72,10 +73,14 @@ func test1() {
 	f.Scale(2)
 	f.Color(color.RGBA{0, 0, 0xFF, 0xFF})
 
+	//text := "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	//text := "abcdefghijklmnopqrstuvwxyz"
 	//text := "`1234567890-=[]\\;',./"
 	//text := "~!@#$%^&*()_+{}|:\"<>?"
-	text := textMultiline
+	//text := textMultiline
+	text := "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
+	//text := "A1B2C3D4E5F6G7H8I9J"
+	//text := "a1b2c3d4e5f6g7h8i9j"
 
 	bounds := f.GetTextBounds(text)
 	if bounds.Empty() {
@@ -83,8 +88,8 @@ func test1() {
 	}
 	m := image.NewRGBA(bounds)
 
-	fillImage(m, color.Black)
-	//fillImage(m, color.White)
+	//fillImage(m, color.Black)
+	fillImage(m, color.RGBA{50, 50, 50, 255})
 
 	f.DrawText(m, image.Point{0, 0}, text)
 
