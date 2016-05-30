@@ -119,6 +119,16 @@ func (f *Font) GetColor() color.Color {
 	return f.c
 }
 
+func (f *Font) GetRuneBounds() image.Rectangle {
+	return image.Rectangle{
+		Min: image.Point{X: 0, Y: 0},
+		Max: image.Point{
+			X: f.size.Dx * f.scale,
+			Y: f.size.Dy * f.scale,
+		},
+	}
+}
+
 func (f *Font) GetTextBounds(text string) image.Rectangle {
 
 	data := []byte(text)
@@ -159,6 +169,20 @@ func (f *Font) GetTextBounds(text string) image.Rectangle {
 	return image.Rect(0, 0, x1, y1)
 }
 
+func (f *Font) DrawRune(cs ColorSetter, pos image.Point, r rune) {
+
+	bm, ok := f.m[r]
+	if !ok {
+		return
+	}
+
+	if m, ok := cs.(*image.RGBA); ok {
+		f.drawBitmapRGBA(m, pos, bm)
+	} else {
+		f.drawBitmap(cs, pos, bm)
+	}
+}
+
 func (f *Font) DrawText(cs ColorSetter, pos image.Point, text string) {
 
 	data := []byte(text)
@@ -194,20 +218,6 @@ func (f *Font) DrawText(cs ColorSetter, pos image.Point, text string) {
 		f.DrawRune(cs, p, r)
 
 		x++
-	}
-}
-
-func (f *Font) DrawRune(cs ColorSetter, pos image.Point, r rune) {
-
-	bm, ok := f.m[r]
-	if !ok {
-		return
-	}
-
-	if m, ok := cs.(*image.RGBA); ok {
-		f.drawBitmapRGBA(m, pos, bm)
-	} else {
-		f.drawBitmap(cs, pos, bm)
 	}
 }
 

@@ -77,8 +77,8 @@ func test1() {
 	//text := "abcdefghijklmnopqrstuvwxyz"
 	//text := "`1234567890-=[]\\;',./"
 	//text := "~!@#$%^&*()_+{}|:\"<>?"
-	//text := textMultiline
-	text := "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
+	text := textMultiline
+	//text := "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
 	//text := "A1B2C3D4E5F6G7H8I9J"
 	//text := "a1b2c3d4e5f6g7h8i9j"
 
@@ -131,6 +131,44 @@ func test2() {
 	}
 }
 
+func drawASCIITable() {
+
+	var data []byte
+	for y := 1; y < 4; y++ {
+		if y > 1 {
+			data = append(data, '\n')
+		}
+		for x := 0; x < 32; x++ {
+			data = append(data, byte(y*32+x))
+		}
+	}
+	text := string(data)
+
+	fontFile := fontVictor
+
+	f, err := fopix.NewFromFile(fontFile)
+	if err != nil {
+		log.Fatal(err)
+	}
+	f.Color(color.RGBA{0, 0, 0xFF, 0xFF})
+	f.Scale(3)
+
+	bounds := f.GetTextBounds(text)
+	if bounds.Empty() {
+		log.Fatal("bounds is empty")
+	}
+	m := image.NewRGBA(bounds)
+
+	fillImage(m, color.RGBA{50, 50, 50, 255})
+
+	f.DrawText(m, image.Point{0, 0}, text)
+
+	err = imageSaveToPNG("test.png", m)
+	if err != nil {
+		log.Fatal(err)
+	}
+}
+
 func main() {
-	test1()
+	drawASCIITable()
 }
