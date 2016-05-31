@@ -17,7 +17,6 @@ Font files are available in the [fonts](fonts)
 - 3x3 Font for Nerds [3x3](http://cargocollective.com/slowercase/3x3-Font-for-Nerds)
 - Victor monospaced
 - [Miniwi](https://github.com/sshbio/miniwi)
-and other
 
 ## Example
 
