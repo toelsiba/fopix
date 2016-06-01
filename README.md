@@ -24,7 +24,7 @@ Font files are available in the directory [fonts](fonts)
 ####[3x3 Font for Nerds](http://cargocollective.com/slowercase/3x3-Font-for-Nerds)
 ![font-3x3](images/font-3x3-multiline.png)
 
-###Victor
+####Victor
 ![victor-ascii](images/victor-ascii.png)
 
 ![victor-multiline](images/victor-multiline.png)
@@ -74,6 +74,9 @@ func main() {
 	}
 }
 ```
+####Result image
+![first](images/first.png)
+
 
 ###use an custom font
 ```go
@@ -144,3 +147,5 @@ func main() {
 	}
 }
 ```
+####Result image
+![go-font](images/go-font.png)
