@@ -10,7 +10,7 @@ go get github.com/toelsiba/fopix
 
 ## Fonts
 
-Font files are available in the [fonts](fonts)
+Font files are available in the directory [fonts](fonts)
 
 ####digits 3x3
 ![digits-3x3](samples/images/digits-3x3.png)
@@ -43,6 +43,7 @@ Font files are available in the [fonts](fonts)
 
 ## Example
 
+###use an existing font
 ```go
 package main
 
@@ -87,5 +88,83 @@ func imageSaveToPNG(fileName string, i image.Image) error {
 	defer w.Flush()
 
 	return png.Encode(w, i)
+}
+```
+
+###use an custom font
+```go
+package main
+
+import (
+	"image"
+	"image/color"
+	"image/draw"
+	"image/png"
+	"log"
+	"os"
+
+	"github.com/toelsiba/fopix"
+)
+
+// custom font
+var gopherFont = fopix.FontInfo{
+	Name:        "Go font",
+	Author:      "Gopher",
+	Description: "something ...",
+	Size:        fopix.Size{Dx: 6, Dy: 7},
+	AnchorPos:   image.Point{0, 0},
+	TargetChar:  '0',
+	CharSet: []fopix.RuneInfo{
+		fopix.RuneInfo{
+			Character: 'G',
+			Bitmap: []string{
+				"-000-",
+				"0---0",
+				"0----",
+				"0-000",
+				"0---0",
+				"-000-",
+			},
+		},
+		fopix.RuneInfo{
+			Character: 'o',
+			Bitmap: []string{
+				"-----",
+				"-----",
+				"-000-",
+				"0---0",
+				"0---0",
+				"-000-",
+			},
+		},
+	},
+}
+
+func main() {
+
+	f, err := fopix.New(gopherFont)
+	if err != nil {
+		log.Fatal(err)
+	}
+	f.Scale(10)
+	f.Color(color.RGBA{0, 0, 0xFF, 0xFF})
+
+	text := "Go"
+
+	m := image.NewRGBA(f.GetTextBounds(text))
+
+	draw.Draw(m, m.Bounds(), &image.Uniform{color.White}, image.ZP, draw.Src)
+
+	f.DrawText(m, image.ZP, text)
+
+	file, err := os.Create("test.png")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer file.Close()
+
+	if err = png.Encode(file, m); err != nil {
+		log.Fatal(err)
+	}
 }
 ```
