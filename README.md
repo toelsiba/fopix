@@ -10,9 +10,9 @@ go get github.com/toelsiba/fopix
 
 ## Fonts
 
-Font files are available in the directory [fonts](fonts)
+Font files are available in the directory [fonts](fonts). Fonts is saved in JSON format.
 
-####digits 3x3
+####Digits 3x3
 ![digits-3x3](images/digits-3x3.png)
 
 ####Digits 3x4
@@ -41,9 +41,9 @@ Font files are available in the directory [fonts](fonts)
 
 ---
 
-## Example
+## Examples
 
-###use an existing font
+###using existing font
 ```go
 package main
 
@@ -78,7 +78,7 @@ func main() {
 ![first](images/first.png)
 
 
-###use an custom font
+###using custom font
 ```go
 package main
 
