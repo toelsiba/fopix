@@ -4,7 +4,6 @@ Simple monospaced pixel font package for golang
 Partly idea taken from: [pixfont](https://github.com/pbnjay/pixfont)
 
 ## Installation
-As usual:
 ```bash
 go get github.com/toelsiba/fopix
 ```
@@ -13,10 +12,34 @@ go get github.com/toelsiba/fopix
 
 Font files are available in the [fonts](fonts)
 
-- [Tom Thumb] (http://robey.lag.net/2010/01/23/tiny-monospace-font.html#comment-1526952840)
-- 3x3 Font for Nerds [3x3](http://cargocollective.com/slowercase/3x3-Font-for-Nerds)
-- Victor monospaced
-- [Miniwi](https://github.com/sshbio/miniwi)
+####digits 3x3
+![digits-3x3](samples/images/digits-3x3.png)
+
+####Digits 3x4
+![digits-3x4](samples/images/digits-3x4.png)
+
+####Digits 3x5
+![digits-3x5](samples/images/digits-3x5.png)
+
+####[3x3 Font for Nerds](http://cargocollective.com/slowercase/3x3-Font-for-Nerds)
+![font-3x3](samples/images/font-3x3-multiline.png)
+
+###Victor
+![victor-ascii](samples/images/victor-ascii.png)
+
+![victor-multiline](samples/images/victor-multiline.png)
+
+####[Miniwi](https://github.com/sshbio/miniwi)
+![miniwi-ascii](samples/images/miniwi-ascii.png)
+
+![miniwi-multiline](samples/images/miniwi-multiline.png)
+
+####[Tom Thumb](http://robey.lag.net/2010/01/23/tiny-monospace-font.html#comment-1526952840)
+![tom-thumb-ascii](samples/images/tom-thumb-ascii.png)
+
+![tom-thumb-multiline](samples/images/tom-thumb-multiline.png)
+
+---
 
 ## Example
 
@@ -26,7 +49,6 @@ package main
 import (
 	"bufio"
 	"image"
-	"image/color"
 	"image/png"
 	"log"
 	"os"
@@ -41,15 +63,14 @@ func main() {
 		log.Fatal(err)
 	}
 	f.Scale(5)
-	f.Color(color.NRGBA{0, 0, 255, 255})
 
 	const text = "Hello, World!"
 
 	m := image.NewRGBA(f.GetTextBounds(text))
-	f.DrawText(m, image.Point{0, 0}, text)
 
-	err = imageSaveToPNG("test.png", m)
-	if err != nil {
+	f.DrawText(m, image.ZP, text)
+
+	if err = imageSaveToPNG("test.png", m); err != nil {
 		log.Fatal(err)
 	}
 }
