@@ -1,17 +1,15 @@
 package main
 
 import (
-	"bufio"
 	"errors"
 	"image"
 	"image/color"
-	"image/draw"
-	"image/png"
 	"log"
 	"os"
 	"path/filepath"
 
 	"github.com/toelsiba/fopix"
+	"github.com/toelsiba/fopix/examples/imutil"
 )
 
 type Sample struct {
@@ -37,29 +35,11 @@ func makeSample(s Sample, outDir string) error {
 	}
 	m := image.NewRGBA(bounds)
 
-	fillImage(m, color.RGBA{0x24, 0x24, 0x24, 0xFF})
+	imutil.ImageSolidFill(m, color.RGBA{0x24, 0x24, 0x24, 0xFF})
 
 	f.DrawText(m, image.ZP, s.Text)
 
-	return imageSaveToPNG(filepath.Join(outDir, s.ImageFile), m)
-}
-
-func fillImage(m draw.Image, c color.Color) {
-	draw.Draw(m, m.Bounds(), &image.Uniform{c}, image.ZP, draw.Src)
-}
-
-func imageSaveToPNG(fileName string, i image.Image) error {
-
-	file, err := os.Create(fileName)
-	if err != nil {
-		return err
-	}
-	defer file.Close()
-
-	w := bufio.NewWriter(file)
-	defer w.Flush()
-
-	return png.Encode(w, i)
+	return imutil.ImageSaveToPNG(filepath.Join(outDir, s.ImageFile), m)
 }
 
 func drawableASCII() string {
@@ -77,16 +57,18 @@ func drawableASCII() string {
 
 func main() {
 
-	const (
-		fontFile3x3         = "../fonts/font-3x3.json"
-		fontFileVictor      = "../fonts/victor.json"
-		fontFileMiniwi      = "../fonts/miniwi.json"
-		fontFileTomThumb    = "../fonts/tom-thumb.json"
-		fontFileTomThumbNew = "../fonts/tom-thumb-new.json"
-		fontFileDigits3x3   = "../fonts/digits-3x3.json"
-		fontFileDigits3x4   = "../fonts/digits-3x4.json"
-		fontFileDigits3x5   = "../fonts/digits-3x5.json"
-		fontFilePixefon4x5  = "../fonts/pixefon-4x5.json"
+	dirFonts := "../../fonts"
+
+	var (
+		fontFile3x3         = filepath.Join(dirFonts, "font-3x3.json")
+		fontFileVictor      = filepath.Join(dirFonts, "victor.json")
+		fontFileMiniwi      = filepath.Join(dirFonts, "miniwi.json")
+		fontFileTomThumb    = filepath.Join(dirFonts, "tom-thumb.json")
+		fontFileTomThumbNew = filepath.Join(dirFonts, "tom-thumb-new.json")
+		fontFileDigits3x3   = filepath.Join(dirFonts, "digits-3x3.json")
+		fontFileDigits3x4   = filepath.Join(dirFonts, "digits-3x4.json")
+		fontFileDigits3x5   = filepath.Join(dirFonts, "digits-3x5.json")
+		fontFilePixefon4x5  = filepath.Join(dirFonts, "pixefon-4x5.json")
 	)
 
 	var textMultiline = `During the 20th century, the field of professional astronomy
@@ -197,8 +179,11 @@ discoveries.`
 		},
 	}
 
+	const dirImages = "images"
+	os.Mkdir(dirImages, os.ModePerm)
+
 	for _, s := range samples {
-		if err := makeSample(s, "images"); err != nil {
+		if err := makeSample(s, dirImages); err != nil {
 			log.Fatal(err)
 		}
 	}
