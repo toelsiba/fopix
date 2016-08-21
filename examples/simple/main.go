@@ -5,7 +5,7 @@ import (
 	"log"
 
 	"github.com/toelsiba/fopix"
-	"github.com/toelsiba/fopix/examples/imutil"
+	"github.com/toelsiba/fopix/imutil"
 )
 
 func main() {
@@ -22,7 +22,7 @@ func main() {
 
 	f.DrawText(m, image.ZP, text)
 
-	if err = imutil.ImageSaveToPNG("test.png", m); err != nil {
+	if err = imutil.ImageSaveToPNG("hello-world.png", m); err != nil {
 		log.Fatal(err)
 	}
 }

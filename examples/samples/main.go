@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 
 	"github.com/toelsiba/fopix"
-	"github.com/toelsiba/fopix/examples/imutil"
+	"github.com/toelsiba/fopix/imutil"
 )
 
 type Sample struct {
@@ -35,7 +35,7 @@ func makeSample(s Sample, outDir string) error {
 	}
 	m := image.NewRGBA(bounds)
 
-	imutil.ImageSolidFill(m, color.RGBA{0x24, 0x24, 0x24, 0xFF})
+	imutil.ImageSolidFill(m, color.RGBA{0x10, 0x10, 0x10, 0xFF})
 
 	f.DrawText(m, image.ZP, s.Text)
 
