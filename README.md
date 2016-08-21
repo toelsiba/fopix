@@ -75,7 +75,7 @@ func main() {
 }
 ```
 ####Result image
-![first](images/first.png)
+![hello-world](images/hello-world.png)
 
 
 ###using custom font
