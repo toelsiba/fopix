@@ -22,7 +22,9 @@ Font files are available in the directory [fonts](fonts). Fonts is saved in JSON
 ![digits-3x5](images/digits-3x5.png)
 
 ####[3x3 Font for Nerds](http://cargocollective.com/slowercase/3x3-Font-for-Nerds)
-![font-3x3](images/font-3x3-multiline.png)
+![font-3x3-ascii](images/font-3x3-ascii.png)
+
+![font-3x3-multiline](images/font-3x3-multiline.png)
 
 ####Victor
 ![victor-ascii](images/victor-ascii.png)
@@ -39,7 +41,7 @@ Font files are available in the directory [fonts](fonts). Fonts is saved in JSON
 
 ![tom-thumb-multiline](images/tom-thumb-multiline.png)
 
-####[Pixefon]
+####Pixefon
 ![pixefon-ascii](images/pixefon-4x5-ascii.png)
 
 ![pixefon-multiline](images/pixefon-4x5-multiline.png)
