@@ -27,7 +27,8 @@ func makeSample(s Sample, outDir string) error {
 	}
 
 	f.Scale(s.Scale)
-	f.Color(color.RGBA{0, 0, 0xFF, 0xFF})
+
+	f.Color(color.RGBA{0x6A, 0x86, 0xE3, 0xFF})
 
 	bounds := f.GetTextBounds(s.Text)
 	if bounds.Empty() {
@@ -35,7 +36,7 @@ func makeSample(s Sample, outDir string) error {
 	}
 	m := image.NewRGBA(bounds)
 
-	imutil.ImageSolidFill(m, color.RGBA{0x10, 0x10, 0x10, 0xFF})
+	imutil.ImageSolidFill(m, color.RGBA{0x23, 0x23, 0x23, 0xFF})
 
 	f.DrawText(m, image.ZP, s.Text)
 

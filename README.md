@@ -39,6 +39,11 @@ Font files are available in the directory [fonts](fonts). Fonts is saved in JSON
 
 ![tom-thumb-multiline](images/tom-thumb-multiline.png)
 
+####[Pixefon]
+![pixefon-ascii](images/pixefon-4x5-ascii.png)
+
+![pixefon-multiline](images/pixefon-4x5-multiline.png)
+
 ---
 
 ## Examples
