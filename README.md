@@ -12,41 +12,41 @@ go get github.com/toelsiba/fopix
 
 Font files are available in the directory [fonts](fonts). Fonts is saved in JSON format.
 
-####Digits 3x3
+#### Digits 3x3
 ![digits-3x3](images/digits-3x3.png)
 
-####Digits 3x4
+#### Digits 3x4
 ![digits-3x4](images/digits-3x4.png)
 
-####Digits 3x5
+#### Digits 3x5
 ![digits-3x5](images/digits-3x5.png)
 
-####[3x3 Font for Nerds](http://cargocollective.com/slowercase/3x3-Font-for-Nerds)
+#### [3x3 Font for Nerds](http://cargocollective.com/slowercase/3x3-Font-for-Nerds)
 ![font-3x3-ascii](images/font-3x3-ascii.png)
 
 ![font-3x3-multiline](images/font-3x3-multiline.png)
 
-####Victor
+#### Victor
 ![victor-ascii](images/victor-ascii.png)
 
 ![victor-multiline](images/victor-multiline.png)
 
-####[Miniwi](https://github.com/sshbio/miniwi)
+#### [Miniwi](https://github.com/sshbio/miniwi)
 ![miniwi-ascii](images/miniwi-ascii.png)
 
 ![miniwi-multiline](images/miniwi-multiline.png)
 
-####[Tom Thumb](http://robey.lag.net/2010/01/23/tiny-monospace-font.html#comment-1526952840)
+#### [Tom Thumb](http://robey.lag.net/2010/01/23/tiny-monospace-font.html#comment-1526952840)
 ![tom-thumb-ascii](images/tom-thumb-ascii.png)
 
 ![tom-thumb-multiline](images/tom-thumb-multiline.png)
 
-####Tom Thumb New
+#### Tom Thumb New
 ![tom-thumb-new-ascii](images/tom-thumb-new-ascii.png)
 
 ![tom-thumb-new-multiline](images/tom-thumb-new-multiline.png)
 
-####Pixefon
+#### Pixefon
 ![pixefon-ascii](images/pixefon-4x5-ascii.png)
 
 ![pixefon-multiline](images/pixefon-4x5-multiline.png)
@@ -55,7 +55,7 @@ Font files are available in the directory [fonts](fonts). Fonts is saved in JSON
 
 ## Examples
 
-###using existing font
+### using existing font
 ```go
 package main
 
@@ -86,11 +86,11 @@ func main() {
 	}
 }
 ```
-####Result image
+#### Result image
 ![hello-world](images/hello-world.png)
 
 
-###using custom font
+### using custom font
 ```go
 package main
 
@@ -159,5 +159,5 @@ func main() {
 	}
 }
 ```
-####Result image
+#### Result image
 ![go-font](images/go-font.png)
