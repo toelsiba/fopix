@@ -51,6 +51,11 @@ Font files are available in the directory [fonts](fonts). Fonts is saved in JSON
 
 ![pixefon-multiline](images/pixefon-4x5-multiline.png)
 
+#### [VGA CP437](https://en.wikipedia.org/wiki/Code_page_437)
+![cp437-table](images/cp437-table.png)
+
+![cp437-text](images/cp437-text.png)
+
 ---
 
 ## Examples
