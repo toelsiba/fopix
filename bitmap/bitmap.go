@@ -1,6 +1,8 @@
 package bitmap
 
-import "errors"
+import (
+	"errors"
+)
 
 var ErrOutOfRange = errors.New("bitmap: index out of range.")
 
@@ -13,7 +15,7 @@ func New(size int) *Bitmap {
 	if size <= 0 {
 		return &Bitmap{}
 	}
-	n, rem := quoRem(size, 8)
+	n, rem := quoRem(size, bitsPerByte)
 	if rem > 0 {
 		n++
 	}
@@ -34,26 +36,22 @@ func (bm *Bitmap) checkOutOfRange(offset int) error {
 	return nil
 }
 
-func (bm *Bitmap) Set(offset int, val bool) error {
-	if err := bm.checkOutOfRange(offset); err != nil {
+func (bm *Bitmap) SetBit(i int, b uint) error {
+	err := bm.checkOutOfRange(i)
+	if err != nil {
 		return err
 	}
-	index, shift := quoRem(offset, 8)
-	if val {
-		bm.data[index] |= 1 << uint(shift)
-	} else {
-		bm.data[index] &= ^(1 << uint(shift))
-	}
+	bytesSetBit(bm.data, i, b)
 	return nil
 }
 
-func (bm *Bitmap) Get(offset int) (val bool, err error) {
-	if err = bm.checkOutOfRange(offset); err != nil {
-		return
+func (bm *Bitmap) GetBit(i int) (uint, error) {
+	err := bm.checkOutOfRange(i)
+	if err != nil {
+		return 0, err
 	}
-	index, shift := quoRem(offset, 8)
-	val = ((bm.data[index] >> uint(shift)) & 1) == 1
-	return
+	b := bytesGetBit(bm.data, i)
+	return b, nil
 }
 
 func (bm *Bitmap) SetAll(val bool) {
@@ -71,7 +69,7 @@ func (bm *Bitmap) String() string {
 
 	var bs []byte
 
-	quo, rem := quoRem(bm.size, 8)
+	quo, rem := quoRem(bm.size, bitsPerByte)
 
 	for i := 0; i < quo; i++ {
 		b := bm.data[i]
@@ -98,10 +96,4 @@ func (bm *Bitmap) String() string {
 	}
 
 	return string(bs)
-}
-
-func quoRem(x, y int) (quo, rem int) {
-	quo = x / y
-	rem = x - quo*y
-	return
 }

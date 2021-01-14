@@ -8,8 +8,15 @@ import (
 	"log"
 
 	"github.com/toelsiba/fopix"
-	"github.com/toelsiba/fopix/fonts"
 	"github.com/toelsiba/fopix/imutil"
+)
+
+var (
+	// bgColor = color.Gray{Y: 10}
+	// fgColor = color.Gray{Y: 200}
+
+	bgColor = color.RGBA{0x23, 0x23, 0x23, 0xFF}
+	fgColor = color.RGBA{0x6A, 0x86, 0xE3, 0xFF}
 )
 
 var table = [256]rune{
@@ -47,9 +54,22 @@ var table = [256]rune{
 	0x00B0, 0x2219, 0x00B7, 0x221A, 0x207F, 0x00B2, 0x25A0, 0x00A0,
 }
 
+var textMultiline = `During the 20th century, the field of professional astronomy
+split into observational and theoretical branches. Observational astronomy
+is focused on acquiring data from observations of astronomical objects, which
+is then analyzed using basic principles of physics. Theoretical astronomy is
+oriented toward the development of computer or analytical models to describe
+astronomical objects and phenomena. The two fields complement each other, with
+theoretical astronomy seeking to explain the observational results and
+observations being used to confirm theoretical results.
+Astronomy is one of the few sciences where amateurs can still play an active
+role, especially in the discovery and observation of transient phenomena.
+Amateur astronomers have made and contributed to many important astronomical
+discoveries.`
+
 func makeTable() {
 	var ds []rune
-	for _, ri := range fonts.VGA_CP437.CharSet {
+	for _, ri := range VGA_CP437.CharSet {
 		ds = append(ds, rune(ri.Character))
 	}
 
@@ -60,6 +80,12 @@ func makeTable() {
 		}
 	}
 	fmt.Println()
+}
+
+func checkError(err error) {
+	if err != nil {
+		log.Fatal(err)
+	}
 }
 
 func textFromTable() string {
@@ -82,66 +108,51 @@ func textFromTable() string {
 	return text
 }
 
+func makeCP437_fileJSON() {
+	err := fopix.WriteFileJSON("cp437.json", VGA_CP437)
+	checkError(err)
+}
+
 func makeCP437_table() {
 
-	f, err := fopix.New(fonts.VGA_CP437)
-	if err != nil {
-		log.Fatal(err)
-	}
-	f.Scale(1)
+	d, err := fopix.NewDrawer(VGA_CP437)
+	checkError(err)
+	d.SetScale(1)
+	d.SetColor(fgColor)
 
 	text := textFromTable()
 
-	m := image.NewRGBA(f.GetTextBounds(text))
+	m := image.NewRGBA(d.TextBounds(text))
 
-	imutil.ImageSolidFill(m, color.Gray{Y: 10})
+	imutil.ImageSolidFill(m, bgColor)
 
-	f.Color(color.Gray{Y: 200})
+	d.DrawText(m, image.ZP, text)
 
-	f.DrawText(m, image.ZP, text)
-
-	if err = imutil.ImageSaveToPNG("cp437-table.png", m); err != nil {
-		log.Fatal(err)
-	}
+	err = imutil.ImageSaveToPNG("cp437-table.png", m)
+	checkError(err)
 }
 
 func makeCP437_text() {
 
-	var textMultiline = `During the 20th century, the field of professional astronomy
-split into observational and theoretical branches. Observational astronomy
-is focused on acquiring data from observations of astronomical objects, which
-is then analyzed using basic principles of physics. Theoretical astronomy is
-oriented toward the development of computer or analytical models to describe
-astronomical objects and phenomena. The two fields complement each other, with
-theoretical astronomy seeking to explain the observational results and
-observations being used to confirm theoretical results.
-Astronomy is one of the few sciences where amateurs can still play an active
-role, especially in the discovery and observation of transient phenomena.
-Amateur astronomers have made and contributed to many important astronomical
-discoveries.`
-
-	f, err := fopix.New(fonts.VGA_CP437)
-	if err != nil {
-		log.Fatal(err)
-	}
-	f.Scale(1)
+	d, err := fopix.NewDrawer(VGA_CP437)
+	checkError(err)
+	d.SetScale(1)
+	d.SetColor(fgColor)
 
 	text := textMultiline
 
-	m := image.NewRGBA(f.GetTextBounds(text))
+	m := image.NewRGBA(d.TextBounds(text))
 
-	imutil.ImageSolidFill(m, color.Gray{Y: 10})
+	imutil.ImageSolidFill(m, bgColor)
 
-	f.Color(color.Gray{Y: 200})
+	d.DrawText(m, image.ZP, text)
 
-	f.DrawText(m, image.ZP, text)
-
-	if err = imutil.ImageSaveToPNG("cp437-text.png", m); err != nil {
-		log.Fatal(err)
-	}
+	err = imutil.ImageSaveToPNG("cp437-text.png", m)
+	checkError(err)
 }
 
 func main() {
+	makeCP437_fileJSON()
 	makeCP437_table()
 	makeCP437_text()
 }

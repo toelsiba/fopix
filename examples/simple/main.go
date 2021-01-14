@@ -10,19 +10,29 @@ import (
 
 func main() {
 
-	f, err := fopix.NewFromFile("../../fonts/tom-thumb-new.json")
+	filename := "../../fonts/tom-thumb-new.json"
+
+	var fi fopix.FontInfo
+	err := fopix.ReadFileJSON(filename, &fi)
+	checkError(err)
+
+	d, err := fopix.NewDrawer(fi)
+	checkError(err)
+
+	d.SetScale(5)
+
+	text := "Hello, World!"
+
+	m := image.NewRGBA(d.TextBounds(text))
+
+	d.DrawText(m, image.ZP, text)
+
+	err = imutil.ImageSaveToPNG("hello-world.png", m)
+	checkError(err)
+}
+
+func checkError(err error) {
 	if err != nil {
-		log.Fatal(err)
-	}
-	f.Scale(5)
-
-	const text = "Hello, World!"
-
-	m := image.NewRGBA(f.GetTextBounds(text))
-
-	f.DrawText(m, image.ZP, text)
-
-	if err = imutil.ImageSaveToPNG("hello-world.png", m); err != nil {
 		log.Fatal(err)
 	}
 }

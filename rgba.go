@@ -7,50 +7,48 @@ import (
 	"github.com/toelsiba/fopix/bitmap"
 )
 
-func (f *Font) drawBitmapRGBA(m *image.RGBA, pos image.Point, bm *bitmap.Bitmap) {
+func (d *Drawer) drawBitmapRGBA(m *image.RGBA, pos image.Point, bm *bitmap.Bitmap) {
 
-	q := color.RGBAModel.Convert(f.c).(color.RGBA)
+	q := color.RGBAModel.Convert(d.c).(color.RGBA)
 	colorData := []byte{q.R, q.G, q.B, q.A}
 
 	var (
-		nX = f.size.Dx
-		nY = f.size.Dy
+		nX = d.size.X
+		nY = d.size.Y
 	)
 
-	if f.scale == 1 {
+	if d.scale == 1 {
 		y := pos.Y
 		for iY := 0; iY < nY; iY++ {
 			x := pos.X
 			for iX := 0; iX < nX; iX++ {
-				if bit, _ := bm.Get(iY*nX + iX); bit {
-					m.Set(x, y, f.c)
+				if bit, _ := bm.GetBit(iY*nX + iX); bit == 1 {
+					m.Set(x, y, d.c)
 				}
 				x++
 			}
 			y++
 		}
-	} else if f.scale > 1 {
+	} else if d.scale > 1 {
 		y := pos.Y
 		for iY := 0; iY < nY; iY++ {
 			x := pos.X
 			for iX := 0; iX < nX; iX++ {
-				if bit, _ := bm.Get(iY*nX + iX); bit {
-					fillRectRGBA(m, pixelRect(x, y, f.scale), colorData)
+				if bit, _ := bm.GetBit(iY*nX + iX); bit == 1 {
+					fillRectRGBA(m, pixelRect(x, y, d.scale), colorData)
 				}
-				x += f.scale
+				x += d.scale
 			}
-			y += f.scale
+			y += d.scale
 		}
 	}
 }
 
 func fillRectRGBA(m *image.RGBA, r image.Rectangle, colorData []byte) {
-
 	r = m.Bounds().Intersect(r)
 	if r.Empty() {
 		return
 	}
-
 	for y := r.Min.Y; y < r.Max.Y; y++ {
 		data := m.Pix[m.PixOffset(r.Min.X, y):]
 		for x := r.Min.X; x < r.Max.X; x++ {

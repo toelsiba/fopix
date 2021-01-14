@@ -2,6 +2,7 @@ package main
 
 import (
 	"errors"
+	"fmt"
 	"image"
 	"image/color"
 	"log"
@@ -21,16 +22,24 @@ type Sample struct {
 
 func makeSample(s Sample, outDir string) error {
 
-	f, err := fopix.NewFromFile(s.FontFile)
+	var fi fopix.FontInfo
+	err := fopix.ReadFileJSON(s.FontFile, &fi)
 	if err != nil {
 		return err
 	}
 
-	f.Scale(s.Scale)
+	if (fi.Size.X <= 0) || (fi.Size.Y <= 0) {
+		return fmt.Errorf("invalid size %v", fi.Size)
+	}
 
-	f.Color(color.RGBA{0x6A, 0x86, 0xE3, 0xFF})
+	d, err := fopix.NewDrawer(fi)
+	if err != nil {
+		return err
+	}
+	d.SetScale(s.Scale)
+	d.SetColor(color.RGBA{0x6A, 0x86, 0xE3, 0xFF})
 
-	bounds := f.GetTextBounds(s.Text)
+	bounds := d.TextBounds(s.Text)
 	if bounds.Empty() {
 		return errors.New("bounds is empty")
 	}
@@ -38,7 +47,7 @@ func makeSample(s Sample, outDir string) error {
 
 	imutil.ImageSolidFill(m, color.RGBA{0x23, 0x23, 0x23, 0xFF})
 
-	f.DrawText(m, image.ZP, s.Text)
+	d.DrawText(m, image.ZP, s.Text)
 
 	return imutil.ImageSaveToPNG(filepath.Join(outDir, s.ImageFile), m)
 }
@@ -70,6 +79,7 @@ func main() {
 		fontFileDigits3x4   = filepath.Join(dirFonts, "digits-3x4.json")
 		fontFileDigits3x5   = filepath.Join(dirFonts, "digits-3x5.json")
 		fontFilePixefon4x5  = filepath.Join(dirFonts, "pixefon-4x5.json")
+		fontFileCP437       = filepath.Join(dirFonts, "cp437.json")
 	)
 
 	var textMultiline = `During the 20th century, the field of professional astronomy
@@ -177,6 +187,18 @@ discoveries.`
 			Text:      textMultiline,
 			ImageFile: "pixefon-4x5-multiline.png",
 			Scale:     2,
+		},
+		Sample{
+			FontFile:  fontFileCP437,
+			Text:      textASCII,
+			ImageFile: "cp437-ascii.png",
+			Scale:     2,
+		},
+		Sample{
+			FontFile:  fontFileCP437,
+			Text:      textMultiline,
+			ImageFile: "cp437-multiline.png",
+			Scale:     1,
 		},
 	}
 

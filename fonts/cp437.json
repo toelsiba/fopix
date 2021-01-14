@@ -1,22 +1,20 @@
-package fonts
-
-import (
-	"image"
-
-	"github.com/toelsiba/fopix"
-)
-
-var VGA_CP437 = fopix.FontInfo{
-	Name:        "VGA Code page 437",
-	Author:      "",
-	Description: "",
-	Size:        fopix.Size{Dx: 9, Dy: 16},
-	AnchorPos:   image.Point{0, 0},
-	TargetChar:  '0',
-	CharSet: []fopix.RuneInfo{
-		fopix.RuneInfo{
-			Character: '\x00',
-			Bitmap: []string{
+{
+	"name": "VGA Code page 437",
+	"author": "",
+	"description": "",
+	"size": {
+		"x": 9,
+		"y": 16
+	},
+	"anchor-pos": {
+		"x": 0,
+		"y": 0
+	},
+	"target-char": "0",
+	"char-set": [
+		{
+			"character": "\u0000",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -32,12 +30,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u263a',
-			Bitmap: []string{
+		{
+			"character": "☺",
+			"bitmap": [
 				"---------",
 				"---------",
 				"-000000--",
@@ -53,12 +51,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u263b',
-			Bitmap: []string{
+		{
+			"character": "☻",
+			"bitmap": [
 				"---------",
 				"---------",
 				"-000000--",
@@ -74,12 +72,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2665',
-			Bitmap: []string{
+		{
+			"character": "♥",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -95,12 +93,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2666',
-			Bitmap: []string{
+		{
+			"character": "♦",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -116,12 +114,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2663',
-			Bitmap: []string{
+		{
+			"character": "♣",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -137,12 +135,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2660',
-			Bitmap: []string{
+		{
+			"character": "♠",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -158,12 +156,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2022',
-			Bitmap: []string{
+		{
+			"character": "•",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -179,12 +177,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u25d8',
-			Bitmap: []string{
+		{
+			"character": "◘",
+			"bitmap": [
 				"00000000-",
 				"00000000-",
 				"00000000-",
@@ -200,12 +198,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"00000000-",
 				"00000000-",
 				"00000000-",
-				"00000000-",
-			},
+				"00000000-"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u25cb',
-			Bitmap: []string{
+		{
+			"character": "○",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -221,12 +219,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u25d9',
-			Bitmap: []string{
+		{
+			"character": "◙",
+			"bitmap": [
 				"00000000-",
 				"00000000-",
 				"00000000-",
@@ -242,12 +240,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"00000000-",
 				"00000000-",
 				"00000000-",
-				"00000000-",
-			},
+				"00000000-"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2642',
-			Bitmap: []string{
+		{
+			"character": "♂",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---0000--",
@@ -263,12 +261,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2640',
-			Bitmap: []string{
+		{
+			"character": "♀",
+			"bitmap": [
 				"---------",
 				"---------",
 				"--0000---",
@@ -284,12 +282,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u266a',
-			Bitmap: []string{
+		{
+			"character": "♪",
+			"bitmap": [
 				"---------",
 				"---------",
 				"--000000-",
@@ -305,12 +303,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u266b',
-			Bitmap: []string{
+		{
+			"character": "♫",
+			"bitmap": [
 				"---------",
 				"---------",
 				"-0000000-",
@@ -326,12 +324,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"00-------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u263c',
-			Bitmap: []string{
+		{
+			"character": "☼",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -347,12 +345,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u25ba',
-			Bitmap: []string{
+		{
+			"character": "►",
+			"bitmap": [
 				"---------",
 				"0--------",
 				"00-------",
@@ -368,12 +366,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u25c4',
-			Bitmap: []string{
+		{
+			"character": "◄",
+			"bitmap": [
 				"---------",
 				"------0--",
 				"-----00--",
@@ -389,12 +387,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2195',
-			Bitmap: []string{
+		{
+			"character": "↕",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---00----",
@@ -410,12 +408,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u203c',
-			Bitmap: []string{
+		{
+			"character": "‼",
+			"bitmap": [
 				"---------",
 				"---------",
 				"-00--00--",
@@ -431,12 +429,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00b6',
-			Bitmap: []string{
+		{
+			"character": "¶",
+			"bitmap": [
 				"---------",
 				"---------",
 				"-0000000-",
@@ -452,12 +450,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00a7',
-			Bitmap: []string{
+		{
+			"character": "§",
+			"bitmap": [
 				"---------",
 				"-00000---",
 				"00---00--",
@@ -473,12 +471,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"-00000---",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u25ac',
-			Bitmap: []string{
+		{
+			"character": "▬",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -494,12 +492,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u21a8',
-			Bitmap: []string{
+		{
+			"character": "↨",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---00----",
@@ -515,12 +513,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2191',
-			Bitmap: []string{
+		{
+			"character": "↑",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---00----",
@@ -536,12 +534,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2193',
-			Bitmap: []string{
+		{
+			"character": "↓",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---00----",
@@ -557,12 +555,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2192',
-			Bitmap: []string{
+		{
+			"character": "→",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -578,12 +576,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2190',
-			Bitmap: []string{
+		{
+			"character": "←",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -599,12 +597,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u221f',
-			Bitmap: []string{
+		{
+			"character": "∟",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -620,12 +618,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2194',
-			Bitmap: []string{
+		{
+			"character": "↔",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -641,12 +639,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u25b2',
-			Bitmap: []string{
+		{
+			"character": "▲",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -662,12 +660,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u25bc',
-			Bitmap: []string{
+		{
+			"character": "▼",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -683,12 +681,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: ' ',
-			Bitmap: []string{
+		{
+			"character": " ",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -704,12 +702,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '!',
-			Bitmap: []string{
+		{
+			"character": "!",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---00----",
@@ -725,12 +723,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '"',
-			Bitmap: []string{
+		{
+			"character": "\"",
+			"bitmap": [
 				"---------",
 				"-00--00--",
 				"-00--00--",
@@ -746,12 +744,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '#',
-			Bitmap: []string{
+		{
+			"character": "#",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -767,12 +765,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '$',
-			Bitmap: []string{
+		{
+			"character": "$",
+			"bitmap": [
 				"---00----",
 				"---00----",
 				"-00000---",
@@ -788,12 +786,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---00----",
 				"---00----",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '%',
-			Bitmap: []string{
+		{
+			"character": "%",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -809,12 +807,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '&',
-			Bitmap: []string{
+		{
+			"character": "\u0026",
+			"bitmap": [
 				"---------",
 				"---------",
 				"--000----",
@@ -830,12 +828,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\'',
-			Bitmap: []string{
+		{
+			"character": "'",
+			"bitmap": [
 				"---------",
 				"--00-----",
 				"--00-----",
@@ -851,12 +849,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '(',
-			Bitmap: []string{
+		{
+			"character": "(",
+			"bitmap": [
 				"---------",
 				"---------",
 				"----00---",
@@ -872,12 +870,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: ')',
-			Bitmap: []string{
+		{
+			"character": ")",
+			"bitmap": [
 				"---------",
 				"---------",
 				"--00-----",
@@ -893,12 +891,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '*',
-			Bitmap: []string{
+		{
+			"character": "*",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -914,12 +912,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '+',
-			Bitmap: []string{
+		{
+			"character": "+",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -935,12 +933,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: ',',
-			Bitmap: []string{
+		{
+			"character": ",",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -956,12 +954,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"--00-----",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '-',
-			Bitmap: []string{
+		{
+			"character": "-",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -977,12 +975,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '.',
-			Bitmap: []string{
+		{
+			"character": ".",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -998,12 +996,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '/',
-			Bitmap: []string{
+		{
+			"character": "/",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -1019,12 +1017,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '0',
-			Bitmap: []string{
+		{
+			"character": "0",
+			"bitmap": [
 				"---------",
 				"---------",
 				"--0000---",
@@ -1040,12 +1038,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '1',
-			Bitmap: []string{
+		{
+			"character": "1",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---00----",
@@ -1061,12 +1059,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '2',
-			Bitmap: []string{
+		{
+			"character": "2",
+			"bitmap": [
 				"---------",
 				"---------",
 				"-00000---",
@@ -1082,12 +1080,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '3',
-			Bitmap: []string{
+		{
+			"character": "3",
+			"bitmap": [
 				"---------",
 				"---------",
 				"-00000---",
@@ -1103,12 +1101,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '4',
-			Bitmap: []string{
+		{
+			"character": "4",
+			"bitmap": [
 				"---------",
 				"---------",
 				"----00---",
@@ -1124,12 +1122,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '5',
-			Bitmap: []string{
+		{
+			"character": "5",
+			"bitmap": [
 				"---------",
 				"---------",
 				"0000000--",
@@ -1145,12 +1143,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '6',
-			Bitmap: []string{
+		{
+			"character": "6",
+			"bitmap": [
 				"---------",
 				"---------",
 				"--000----",
@@ -1166,12 +1164,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '7',
-			Bitmap: []string{
+		{
+			"character": "7",
+			"bitmap": [
 				"---------",
 				"---------",
 				"0000000--",
@@ -1187,12 +1185,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '8',
-			Bitmap: []string{
+		{
+			"character": "8",
+			"bitmap": [
 				"---------",
 				"---------",
 				"-00000---",
@@ -1208,12 +1206,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '9',
-			Bitmap: []string{
+		{
+			"character": "9",
+			"bitmap": [
 				"---------",
 				"---------",
 				"-00000---",
@@ -1229,12 +1227,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: ':',
-			Bitmap: []string{
+		{
+			"character": ":",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -1250,12 +1248,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: ';',
-			Bitmap: []string{
+		{
+			"character": ";",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -1271,12 +1269,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '<',
-			Bitmap: []string{
+		{
+			"character": "\u003c",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -1292,12 +1290,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '=',
-			Bitmap: []string{
+		{
+			"character": "=",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -1313,12 +1311,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '>',
-			Bitmap: []string{
+		{
+			"character": "\u003e",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -1334,12 +1332,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '?',
-			Bitmap: []string{
+		{
+			"character": "?",
+			"bitmap": [
 				"---------",
 				"---------",
 				"-00000---",
@@ -1355,12 +1353,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '@',
-			Bitmap: []string{
+		{
+			"character": "@",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -1376,12 +1374,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'A',
-			Bitmap: []string{
+		{
+			"character": "A",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---0-----",
@@ -1397,12 +1395,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'B',
-			Bitmap: []string{
+		{
+			"character": "B",
+			"bitmap": [
 				"---------",
 				"---------",
 				"000000---",
@@ -1418,12 +1416,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'C',
-			Bitmap: []string{
+		{
+			"character": "C",
+			"bitmap": [
 				"---------",
 				"---------",
 				"--0000---",
@@ -1439,12 +1437,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'D',
-			Bitmap: []string{
+		{
+			"character": "D",
+			"bitmap": [
 				"---------",
 				"---------",
 				"00000----",
@@ -1460,12 +1458,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'E',
-			Bitmap: []string{
+		{
+			"character": "E",
+			"bitmap": [
 				"---------",
 				"---------",
 				"0000000--",
@@ -1481,12 +1479,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'F',
-			Bitmap: []string{
+		{
+			"character": "F",
+			"bitmap": [
 				"---------",
 				"---------",
 				"0000000--",
@@ -1502,12 +1500,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'G',
-			Bitmap: []string{
+		{
+			"character": "G",
+			"bitmap": [
 				"---------",
 				"---------",
 				"--0000---",
@@ -1523,12 +1521,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'H',
-			Bitmap: []string{
+		{
+			"character": "H",
+			"bitmap": [
 				"---------",
 				"---------",
 				"00---00--",
@@ -1544,12 +1542,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'I',
-			Bitmap: []string{
+		{
+			"character": "I",
+			"bitmap": [
 				"---------",
 				"---------",
 				"--0000---",
@@ -1565,12 +1563,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'J',
-			Bitmap: []string{
+		{
+			"character": "J",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---0000--",
@@ -1586,12 +1584,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'K',
-			Bitmap: []string{
+		{
+			"character": "K",
+			"bitmap": [
 				"---------",
 				"---------",
 				"000--00--",
@@ -1607,12 +1605,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'L',
-			Bitmap: []string{
+		{
+			"character": "L",
+			"bitmap": [
 				"---------",
 				"---------",
 				"0000-----",
@@ -1628,12 +1626,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'M',
-			Bitmap: []string{
+		{
+			"character": "M",
+			"bitmap": [
 				"---------",
 				"---------",
 				"00----00-",
@@ -1649,12 +1647,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'N',
-			Bitmap: []string{
+		{
+			"character": "N",
+			"bitmap": [
 				"---------",
 				"---------",
 				"00---00--",
@@ -1670,12 +1668,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'O',
-			Bitmap: []string{
+		{
+			"character": "O",
+			"bitmap": [
 				"---------",
 				"---------",
 				"-00000---",
@@ -1691,12 +1689,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'P',
-			Bitmap: []string{
+		{
+			"character": "P",
+			"bitmap": [
 				"---------",
 				"---------",
 				"000000---",
@@ -1712,12 +1710,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'Q',
-			Bitmap: []string{
+		{
+			"character": "Q",
+			"bitmap": [
 				"---------",
 				"---------",
 				"-00000---",
@@ -1733,12 +1731,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"----00---",
 				"----000--",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'R',
-			Bitmap: []string{
+		{
+			"character": "R",
+			"bitmap": [
 				"---------",
 				"---------",
 				"000000---",
@@ -1754,12 +1752,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'S',
-			Bitmap: []string{
+		{
+			"character": "S",
+			"bitmap": [
 				"---------",
 				"---------",
 				"-00000---",
@@ -1775,12 +1773,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'T',
-			Bitmap: []string{
+		{
+			"character": "T",
+			"bitmap": [
 				"---------",
 				"---------",
 				"00000000-",
@@ -1796,12 +1794,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'U',
-			Bitmap: []string{
+		{
+			"character": "U",
+			"bitmap": [
 				"---------",
 				"---------",
 				"00---00--",
@@ -1817,12 +1815,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'V',
-			Bitmap: []string{
+		{
+			"character": "V",
+			"bitmap": [
 				"---------",
 				"---------",
 				"00----00-",
@@ -1838,12 +1836,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'W',
-			Bitmap: []string{
+		{
+			"character": "W",
+			"bitmap": [
 				"---------",
 				"---------",
 				"00----00-",
@@ -1859,12 +1857,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'X',
-			Bitmap: []string{
+		{
+			"character": "X",
+			"bitmap": [
 				"---------",
 				"---------",
 				"00----00-",
@@ -1880,12 +1878,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'Y',
-			Bitmap: []string{
+		{
+			"character": "Y",
+			"bitmap": [
 				"---------",
 				"---------",
 				"00----00-",
@@ -1901,12 +1899,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'Z',
-			Bitmap: []string{
+		{
+			"character": "Z",
+			"bitmap": [
 				"---------",
 				"---------",
 				"00000000-",
@@ -1922,12 +1920,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '[',
-			Bitmap: []string{
+		{
+			"character": "[",
+			"bitmap": [
 				"---------",
 				"---------",
 				"--0000---",
@@ -1943,12 +1941,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\\',
-			Bitmap: []string{
+		{
+			"character": "\\",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -1964,12 +1962,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: ']',
-			Bitmap: []string{
+		{
+			"character": "]",
+			"bitmap": [
 				"---------",
 				"---------",
 				"--0000---",
@@ -1985,12 +1983,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '^',
-			Bitmap: []string{
+		{
+			"character": "^",
+			"bitmap": [
 				"---0-----",
 				"--000----",
 				"-00-00---",
@@ -2006,12 +2004,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '_',
-			Bitmap: []string{
+		{
+			"character": "_",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -2027,12 +2025,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"00000000-",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '`',
-			Bitmap: []string{
+		{
+			"character": "`",
+			"bitmap": [
 				"--00-----",
 				"--00-----",
 				"---00----",
@@ -2048,12 +2046,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'a',
-			Bitmap: []string{
+		{
+			"character": "a",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -2069,12 +2067,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'b',
-			Bitmap: []string{
+		{
+			"character": "b",
+			"bitmap": [
 				"---------",
 				"---------",
 				"000------",
@@ -2090,12 +2088,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'c',
-			Bitmap: []string{
+		{
+			"character": "c",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -2111,12 +2109,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'd',
-			Bitmap: []string{
+		{
+			"character": "d",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---000---",
@@ -2132,12 +2130,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'e',
-			Bitmap: []string{
+		{
+			"character": "e",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -2153,12 +2151,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'f',
-			Bitmap: []string{
+		{
+			"character": "f",
+			"bitmap": [
 				"---------",
 				"---------",
 				"--000----",
@@ -2174,12 +2172,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'g',
-			Bitmap: []string{
+		{
+			"character": "g",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -2195,12 +2193,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"----00---",
 				"00--00---",
 				"-0000----",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'h',
-			Bitmap: []string{
+		{
+			"character": "h",
+			"bitmap": [
 				"---------",
 				"---------",
 				"000------",
@@ -2216,12 +2214,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'i',
-			Bitmap: []string{
+		{
+			"character": "i",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---00----",
@@ -2237,12 +2235,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'j',
-			Bitmap: []string{
+		{
+			"character": "j",
+			"bitmap": [
 				"---------",
 				"---------",
 				"-----00--",
@@ -2258,12 +2256,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"-00--00--",
 				"-00--00--",
 				"--0000---",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'k',
-			Bitmap: []string{
+		{
+			"character": "k",
+			"bitmap": [
 				"---------",
 				"---------",
 				"000------",
@@ -2279,12 +2277,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'l',
-			Bitmap: []string{
+		{
+			"character": "l",
+			"bitmap": [
 				"---------",
 				"---------",
 				"--000----",
@@ -2300,12 +2298,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'm',
-			Bitmap: []string{
+		{
+			"character": "m",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -2321,12 +2319,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'n',
-			Bitmap: []string{
+		{
+			"character": "n",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -2342,12 +2340,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'o',
-			Bitmap: []string{
+		{
+			"character": "o",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -2363,12 +2361,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'p',
-			Bitmap: []string{
+		{
+			"character": "p",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -2384,12 +2382,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"-00------",
 				"-00------",
 				"0000-----",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'q',
-			Bitmap: []string{
+		{
+			"character": "q",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -2405,12 +2403,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"----00---",
 				"----00---",
 				"---0000--",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'r',
-			Bitmap: []string{
+		{
+			"character": "r",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -2426,12 +2424,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 's',
-			Bitmap: []string{
+		{
+			"character": "s",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -2447,12 +2445,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 't',
-			Bitmap: []string{
+		{
+			"character": "t",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---0-----",
@@ -2468,12 +2466,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'u',
-			Bitmap: []string{
+		{
+			"character": "u",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -2489,12 +2487,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'v',
-			Bitmap: []string{
+		{
+			"character": "v",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -2510,12 +2508,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'w',
-			Bitmap: []string{
+		{
+			"character": "w",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -2531,12 +2529,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'x',
-			Bitmap: []string{
+		{
+			"character": "x",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -2552,12 +2550,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'y',
-			Bitmap: []string{
+		{
+			"character": "y",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -2573,12 +2571,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"-----00--",
 				"----00---",
 				"00000----",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: 'z',
-			Bitmap: []string{
+		{
+			"character": "z",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -2594,12 +2592,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '{',
-			Bitmap: []string{
+		{
+			"character": "{",
+			"bitmap": [
 				"---------",
 				"---------",
 				"----000--",
@@ -2615,12 +2613,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '|',
-			Bitmap: []string{
+		{
+			"character": "|",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---00----",
@@ -2636,12 +2634,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '}',
-			Bitmap: []string{
+		{
+			"character": "}",
+			"bitmap": [
 				"---------",
 				"---------",
 				"-000-----",
@@ -2657,12 +2655,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '~',
-			Bitmap: []string{
+		{
+			"character": "~",
+			"bitmap": [
 				"---------",
 				"---------",
 				"-000-00--",
@@ -2678,12 +2676,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2302',
-			Bitmap: []string{
+		{
+			"character": "⌂",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -2699,12 +2697,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00c7',
-			Bitmap: []string{
+		{
+			"character": "Ç",
+			"bitmap": [
 				"---------",
 				"---------",
 				"--0000---",
@@ -2720,12 +2718,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"-----00--",
 				"-00000---",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00fc',
-			Bitmap: []string{
+		{
+			"character": "ü",
+			"bitmap": [
 				"---------",
 				"---------",
 				"00--00---",
@@ -2741,12 +2739,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00e9',
-			Bitmap: []string{
+		{
+			"character": "é",
+			"bitmap": [
 				"---------",
 				"----00---",
 				"---00----",
@@ -2762,12 +2760,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00e2',
-			Bitmap: []string{
+		{
+			"character": "â",
+			"bitmap": [
 				"---------",
 				"---0-----",
 				"--000----",
@@ -2783,12 +2781,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00e4',
-			Bitmap: []string{
+		{
+			"character": "ä",
+			"bitmap": [
 				"---------",
 				"---------",
 				"00--00---",
@@ -2804,12 +2802,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00e0',
-			Bitmap: []string{
+		{
+			"character": "à",
+			"bitmap": [
 				"---------",
 				"-00------",
 				"--00-----",
@@ -2825,12 +2823,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00e5',
-			Bitmap: []string{
+		{
+			"character": "å",
+			"bitmap": [
 				"---------",
 				"--000----",
 				"-00-00---",
@@ -2846,12 +2844,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00e7',
-			Bitmap: []string{
+		{
+			"character": "ç",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -2867,12 +2865,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"--0000---",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00ea',
-			Bitmap: []string{
+		{
+			"character": "ê",
+			"bitmap": [
 				"---------",
 				"---0-----",
 				"--000----",
@@ -2888,12 +2886,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00eb',
-			Bitmap: []string{
+		{
+			"character": "ë",
+			"bitmap": [
 				"---------",
 				"---------",
 				"00---00--",
@@ -2909,12 +2907,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00e8',
-			Bitmap: []string{
+		{
+			"character": "è",
+			"bitmap": [
 				"---------",
 				"-00------",
 				"--00-----",
@@ -2930,12 +2928,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00ef',
-			Bitmap: []string{
+		{
+			"character": "ï",
+			"bitmap": [
 				"---------",
 				"---------",
 				"-00--00--",
@@ -2951,12 +2949,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00ee',
-			Bitmap: []string{
+		{
+			"character": "î",
+			"bitmap": [
 				"---------",
 				"---00----",
 				"--0000---",
@@ -2972,12 +2970,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00ec',
-			Bitmap: []string{
+		{
+			"character": "ì",
+			"bitmap": [
 				"---------",
 				"-00------",
 				"--00-----",
@@ -2993,12 +2991,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00c4',
-			Bitmap: []string{
+		{
+			"character": "Ä",
+			"bitmap": [
 				"---------",
 				"00---00--",
 				"---------",
@@ -3014,12 +3012,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00c5',
-			Bitmap: []string{
+		{
+			"character": "Å",
+			"bitmap": [
 				"--000----",
 				"-00-00---",
 				"--000----",
@@ -3035,12 +3033,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00c9',
-			Bitmap: []string{
+		{
+			"character": "É",
+			"bitmap": [
 				"---00----",
 				"--00-----",
 				"-00------",
@@ -3056,12 +3054,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00e6',
-			Bitmap: []string{
+		{
+			"character": "æ",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -3077,12 +3075,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00c6',
-			Bitmap: []string{
+		{
+			"character": "Æ",
+			"bitmap": [
 				"---------",
 				"---------",
 				"--00000--",
@@ -3098,12 +3096,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00f4',
-			Bitmap: []string{
+		{
+			"character": "ô",
+			"bitmap": [
 				"---------",
 				"---0-----",
 				"--000----",
@@ -3119,12 +3117,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00f6',
-			Bitmap: []string{
+		{
+			"character": "ö",
+			"bitmap": [
 				"---------",
 				"---------",
 				"00---00--",
@@ -3140,12 +3138,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00f2',
-			Bitmap: []string{
+		{
+			"character": "ò",
+			"bitmap": [
 				"---------",
 				"-00------",
 				"--00-----",
@@ -3161,12 +3159,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00fb',
-			Bitmap: []string{
+		{
+			"character": "û",
+			"bitmap": [
 				"---------",
 				"--00-----",
 				"-0000----",
@@ -3182,12 +3180,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00f9',
-			Bitmap: []string{
+		{
+			"character": "ù",
+			"bitmap": [
 				"---------",
 				"-00------",
 				"--00-----",
@@ -3203,12 +3201,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00ff',
-			Bitmap: []string{
+		{
+			"character": "ÿ",
+			"bitmap": [
 				"---------",
 				"---------",
 				"00---00--",
@@ -3224,12 +3222,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"-----00--",
 				"----00---",
 				"-0000----",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00d6',
-			Bitmap: []string{
+		{
+			"character": "Ö",
+			"bitmap": [
 				"---------",
 				"00---00--",
 				"---------",
@@ -3245,12 +3243,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00dc',
-			Bitmap: []string{
+		{
+			"character": "Ü",
+			"bitmap": [
 				"---------",
 				"00---00--",
 				"---------",
@@ -3266,12 +3264,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00a2',
-			Bitmap: []string{
+		{
+			"character": "¢",
+			"bitmap": [
 				"---------",
 				"---00----",
 				"---00----",
@@ -3287,12 +3285,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00a3',
-			Bitmap: []string{
+		{
+			"character": "£",
+			"bitmap": [
 				"---------",
 				"--000----",
 				"-00-00---",
@@ -3308,12 +3306,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00a5',
-			Bitmap: []string{
+		{
+			"character": "¥",
+			"bitmap": [
 				"---------",
 				"---------",
 				"00----00-",
@@ -3329,12 +3327,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u20a7',
-			Bitmap: []string{
+		{
+			"character": "₧",
+			"bitmap": [
 				"---------",
 				"000000---",
 				"-00--00--",
@@ -3350,12 +3348,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u0192',
-			Bitmap: []string{
+		{
+			"character": "ƒ",
+			"bitmap": [
 				"---------",
 				"----000--",
 				"---00-00-",
@@ -3371,12 +3369,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"00-00----",
 				"-000-----",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00e1',
-			Bitmap: []string{
+		{
+			"character": "á",
+			"bitmap": [
 				"---------",
 				"---00----",
 				"--00-----",
@@ -3392,12 +3390,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00ed',
-			Bitmap: []string{
+		{
+			"character": "í",
+			"bitmap": [
 				"---------",
 				"----00---",
 				"---00----",
@@ -3413,12 +3411,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00f3',
-			Bitmap: []string{
+		{
+			"character": "ó",
+			"bitmap": [
 				"---------",
 				"---00----",
 				"--00-----",
@@ -3434,12 +3432,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00fa',
-			Bitmap: []string{
+		{
+			"character": "ú",
+			"bitmap": [
 				"---------",
 				"---00----",
 				"--00-----",
@@ -3455,12 +3453,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00f1',
-			Bitmap: []string{
+		{
+			"character": "ñ",
+			"bitmap": [
 				"---------",
 				"---------",
 				"-000-00--",
@@ -3476,12 +3474,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00d1',
-			Bitmap: []string{
+		{
+			"character": "Ñ",
+			"bitmap": [
 				"-000-00--",
 				"00-000---",
 				"---------",
@@ -3497,12 +3495,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00aa',
-			Bitmap: []string{
+		{
+			"character": "ª",
+			"bitmap": [
 				"---------",
 				"--0000---",
 				"-00-00---",
@@ -3518,12 +3516,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00ba',
-			Bitmap: []string{
+		{
+			"character": "º",
+			"bitmap": [
 				"---------",
 				"--000----",
 				"-00-00---",
@@ -3539,12 +3537,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00bf',
-			Bitmap: []string{
+		{
+			"character": "¿",
+			"bitmap": [
 				"---------",
 				"---------",
 				"--00-----",
@@ -3560,12 +3558,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2310',
-			Bitmap: []string{
+		{
+			"character": "⌐",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -3581,12 +3579,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00ac',
-			Bitmap: []string{
+		{
+			"character": "¬",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -3602,12 +3600,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00bd',
-			Bitmap: []string{
+		{
+			"character": "½",
+			"bitmap": [
 				"---------",
 				"00-------",
 				"00-------",
@@ -3623,12 +3621,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"----00---",
 				"---00000-",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00bc',
-			Bitmap: []string{
+		{
+			"character": "¼",
+			"bitmap": [
 				"---------",
 				"00-------",
 				"00-------",
@@ -3644,12 +3642,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"-----00--",
 				"-----00--",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00a1',
-			Bitmap: []string{
+		{
+			"character": "¡",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---00----",
@@ -3665,12 +3663,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00ab',
-			Bitmap: []string{
+		{
+			"character": "«",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -3686,12 +3684,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00bb',
-			Bitmap: []string{
+		{
+			"character": "»",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -3707,12 +3705,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2591',
-			Bitmap: []string{
+		{
+			"character": "░",
+			"bitmap": [
 				"---0---00",
 				"-0---0---",
 				"---0---00",
@@ -3728,12 +3726,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---0---00",
 				"-0---0---",
 				"---0---00",
-				"-0---0---",
-			},
+				"-0---0---"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2592',
-			Bitmap: []string{
+		{
+			"character": "▒",
+			"bitmap": [
 				"-0-0-0-00",
 				"0-0-0-0--",
 				"-0-0-0-00",
@@ -3749,12 +3747,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"-0-0-0-00",
 				"0-0-0-0--",
 				"-0-0-0-00",
-				"0-0-0-0--",
-			},
+				"0-0-0-0--"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2593',
-			Bitmap: []string{
+		{
+			"character": "▓",
+			"bitmap": [
 				"00-000-00",
 				"-000-0000",
 				"00-000-00",
@@ -3770,12 +3768,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"00-000-00",
 				"-000-0000",
 				"00-000-00",
-				"-000-0000",
-			},
+				"-000-0000"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2502',
-			Bitmap: []string{
+		{
+			"character": "│",
+			"bitmap": [
 				"---00----",
 				"---00----",
 				"---00----",
@@ -3791,12 +3789,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---00----",
 				"---00----",
 				"---00----",
-				"---00----",
-			},
+				"---00----"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2524',
-			Bitmap: []string{
+		{
+			"character": "┤",
+			"bitmap": [
 				"---00----",
 				"---00----",
 				"---00----",
@@ -3812,12 +3810,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---00----",
 				"---00----",
 				"---00----",
-				"---00----",
-			},
+				"---00----"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2561',
-			Bitmap: []string{
+		{
+			"character": "╡",
+			"bitmap": [
 				"---00----",
 				"---00----",
 				"---00----",
@@ -3833,12 +3831,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---00----",
 				"---00----",
 				"---00----",
-				"---00----",
-			},
+				"---00----"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2562',
-			Bitmap: []string{
+		{
+			"character": "╢",
+			"bitmap": [
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
@@ -3854,12 +3852,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
-				"--00-00--",
-			},
+				"--00-00--"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2556',
-			Bitmap: []string{
+		{
+			"character": "╖",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -3875,12 +3873,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
-				"--00-00--",
-			},
+				"--00-00--"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2555',
-			Bitmap: []string{
+		{
+			"character": "╕",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -3896,12 +3894,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---00----",
 				"---00----",
 				"---00----",
-				"---00----",
-			},
+				"---00----"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2563',
-			Bitmap: []string{
+		{
+			"character": "╣",
+			"bitmap": [
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
@@ -3917,12 +3915,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
-				"--00-00--",
-			},
+				"--00-00--"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2551',
-			Bitmap: []string{
+		{
+			"character": "║",
+			"bitmap": [
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
@@ -3938,12 +3936,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
-				"--00-00--",
-			},
+				"--00-00--"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2557',
-			Bitmap: []string{
+		{
+			"character": "╗",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -3959,12 +3957,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
-				"--00-00--",
-			},
+				"--00-00--"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u255d',
-			Bitmap: []string{
+		{
+			"character": "╝",
+			"bitmap": [
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
@@ -3980,12 +3978,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u255c',
-			Bitmap: []string{
+		{
+			"character": "╜",
+			"bitmap": [
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
@@ -4001,12 +3999,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u255b',
-			Bitmap: []string{
+		{
+			"character": "╛",
+			"bitmap": [
 				"---00----",
 				"---00----",
 				"---00----",
@@ -4022,12 +4020,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2510',
-			Bitmap: []string{
+		{
+			"character": "┐",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -4043,12 +4041,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---00----",
 				"---00----",
 				"---00----",
-				"---00----",
-			},
+				"---00----"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2514',
-			Bitmap: []string{
+		{
+			"character": "└",
+			"bitmap": [
 				"---00----",
 				"---00----",
 				"---00----",
@@ -4064,12 +4062,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2534',
-			Bitmap: []string{
+		{
+			"character": "┴",
+			"bitmap": [
 				"---00----",
 				"---00----",
 				"---00----",
@@ -4085,12 +4083,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u252c',
-			Bitmap: []string{
+		{
+			"character": "┬",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -4106,12 +4104,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---00----",
 				"---00----",
 				"---00----",
-				"---00----",
-			},
+				"---00----"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u251c',
-			Bitmap: []string{
+		{
+			"character": "├",
+			"bitmap": [
 				"---00----",
 				"---00----",
 				"---00----",
@@ -4127,12 +4125,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---00----",
 				"---00----",
 				"---00----",
-				"---00----",
-			},
+				"---00----"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2500',
-			Bitmap: []string{
+		{
+			"character": "─",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -4148,12 +4146,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u253c',
-			Bitmap: []string{
+		{
+			"character": "┼",
+			"bitmap": [
 				"---00----",
 				"---00----",
 				"---00----",
@@ -4169,12 +4167,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---00----",
 				"---00----",
 				"---00----",
-				"---00----",
-			},
+				"---00----"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u255e',
-			Bitmap: []string{
+		{
+			"character": "╞",
+			"bitmap": [
 				"---00----",
 				"---00----",
 				"---00----",
@@ -4190,12 +4188,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---00----",
 				"---00----",
 				"---00----",
-				"---00----",
-			},
+				"---00----"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u255f',
-			Bitmap: []string{
+		{
+			"character": "╟",
+			"bitmap": [
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
@@ -4211,12 +4209,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
-				"--00-00--",
-			},
+				"--00-00--"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u255a',
-			Bitmap: []string{
+		{
+			"character": "╚",
+			"bitmap": [
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
@@ -4232,12 +4230,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2554',
-			Bitmap: []string{
+		{
+			"character": "╔",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -4253,12 +4251,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
-				"--00-00--",
-			},
+				"--00-00--"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2569',
-			Bitmap: []string{
+		{
+			"character": "╩",
+			"bitmap": [
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
@@ -4274,12 +4272,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2566',
-			Bitmap: []string{
+		{
+			"character": "╦",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -4295,12 +4293,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
-				"--00-00--",
-			},
+				"--00-00--"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2560',
-			Bitmap: []string{
+		{
+			"character": "╠",
+			"bitmap": [
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
@@ -4316,12 +4314,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
-				"--00-00--",
-			},
+				"--00-00--"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2550',
-			Bitmap: []string{
+		{
+			"character": "═",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -4337,12 +4335,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u256c',
-			Bitmap: []string{
+		{
+			"character": "╬",
+			"bitmap": [
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
@@ -4358,12 +4356,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
-				"--00-00--",
-			},
+				"--00-00--"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2567',
-			Bitmap: []string{
+		{
+			"character": "╧",
+			"bitmap": [
 				"---00----",
 				"---00----",
 				"---00----",
@@ -4379,12 +4377,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2568',
-			Bitmap: []string{
+		{
+			"character": "╨",
+			"bitmap": [
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
@@ -4400,12 +4398,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2564',
-			Bitmap: []string{
+		{
+			"character": "╤",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -4421,12 +4419,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---00----",
 				"---00----",
 				"---00----",
-				"---00----",
-			},
+				"---00----"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2565',
-			Bitmap: []string{
+		{
+			"character": "╥",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -4442,12 +4440,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
-				"--00-00--",
-			},
+				"--00-00--"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2559',
-			Bitmap: []string{
+		{
+			"character": "╙",
+			"bitmap": [
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
@@ -4463,12 +4461,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2558',
-			Bitmap: []string{
+		{
+			"character": "╘",
+			"bitmap": [
 				"---00----",
 				"---00----",
 				"---00----",
@@ -4484,12 +4482,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2552',
-			Bitmap: []string{
+		{
+			"character": "╒",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -4505,12 +4503,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---00----",
 				"---00----",
 				"---00----",
-				"---00----",
-			},
+				"---00----"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2553',
-			Bitmap: []string{
+		{
+			"character": "╓",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -4526,12 +4524,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
-				"--00-00--",
-			},
+				"--00-00--"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u256b',
-			Bitmap: []string{
+		{
+			"character": "╫",
+			"bitmap": [
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
@@ -4547,12 +4545,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"--00-00--",
 				"--00-00--",
 				"--00-00--",
-				"--00-00--",
-			},
+				"--00-00--"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u256a',
-			Bitmap: []string{
+		{
+			"character": "╪",
+			"bitmap": [
 				"---00----",
 				"---00----",
 				"---00----",
@@ -4568,12 +4566,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---00----",
 				"---00----",
 				"---00----",
-				"---00----",
-			},
+				"---00----"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2518',
-			Bitmap: []string{
+		{
+			"character": "┘",
+			"bitmap": [
 				"---00----",
 				"---00----",
 				"---00----",
@@ -4589,12 +4587,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u250c',
-			Bitmap: []string{
+		{
+			"character": "┌",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -4610,12 +4608,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---00----",
 				"---00----",
 				"---00----",
-				"---00----",
-			},
+				"---00----"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2588',
-			Bitmap: []string{
+		{
+			"character": "█",
+			"bitmap": [
 				"000000000",
 				"000000000",
 				"000000000",
@@ -4631,12 +4629,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"000000000",
 				"000000000",
 				"000000000",
-				"000000000",
-			},
+				"000000000"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2584',
-			Bitmap: []string{
+		{
+			"character": "▄",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -4652,12 +4650,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"000000000",
 				"000000000",
 				"000000000",
-				"000000000",
-			},
+				"000000000"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u258c',
-			Bitmap: []string{
+		{
+			"character": "▌",
+			"bitmap": [
 				"0000-----",
 				"0000-----",
 				"0000-----",
@@ -4673,12 +4671,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"0000-----",
 				"0000-----",
 				"0000-----",
-				"0000-----",
-			},
+				"0000-----"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2590',
-			Bitmap: []string{
+		{
+			"character": "▐",
+			"bitmap": [
 				"----00000",
 				"----00000",
 				"----00000",
@@ -4694,12 +4692,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"----00000",
 				"----00000",
 				"----00000",
-				"----00000",
-			},
+				"----00000"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2580',
-			Bitmap: []string{
+		{
+			"character": "▀",
+			"bitmap": [
 				"000000000",
 				"000000000",
 				"000000000",
@@ -4715,12 +4713,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u03b1',
-			Bitmap: []string{
+		{
+			"character": "α",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -4736,12 +4734,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00df',
-			Bitmap: []string{
+		{
+			"character": "ß",
+			"bitmap": [
 				"---------",
 				"---------",
 				"-0000----",
@@ -4757,12 +4755,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u0393',
-			Bitmap: []string{
+		{
+			"character": "Γ",
+			"bitmap": [
 				"---------",
 				"---------",
 				"0000000--",
@@ -4778,12 +4776,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u03c0',
-			Bitmap: []string{
+		{
+			"character": "π",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -4799,12 +4797,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u03a3',
-			Bitmap: []string{
+		{
+			"character": "Σ",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -4820,12 +4818,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u03c3',
-			Bitmap: []string{
+		{
+			"character": "σ",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -4841,12 +4839,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00b5',
-			Bitmap: []string{
+		{
+			"character": "µ",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -4862,12 +4860,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"00-------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u03c4',
-			Bitmap: []string{
+		{
+			"character": "τ",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -4883,12 +4881,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u03a6',
-			Bitmap: []string{
+		{
+			"character": "Φ",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -4904,12 +4902,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u0398',
-			Bitmap: []string{
+		{
+			"character": "Θ",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -4925,12 +4923,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u03a9',
-			Bitmap: []string{
+		{
+			"character": "Ω",
+			"bitmap": [
 				"---------",
 				"---------",
 				"--000----",
@@ -4946,12 +4944,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u03b4',
-			Bitmap: []string{
+		{
+			"character": "δ",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---0000--",
@@ -4967,12 +4965,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u221e',
-			Bitmap: []string{
+		{
+			"character": "∞",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -4988,12 +4986,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u03c6',
-			Bitmap: []string{
+		{
+			"character": "φ",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -5009,12 +5007,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u03b5',
-			Bitmap: []string{
+		{
+			"character": "ε",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---000---",
@@ -5030,12 +5028,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2229',
-			Bitmap: []string{
+		{
+			"character": "∩",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -5051,12 +5049,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2261',
-			Bitmap: []string{
+		{
+			"character": "≡",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -5072,12 +5070,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00b1',
-			Bitmap: []string{
+		{
+			"character": "±",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -5093,12 +5091,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2265',
-			Bitmap: []string{
+		{
+			"character": "≥",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -5114,12 +5112,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2264',
-			Bitmap: []string{
+		{
+			"character": "≤",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -5135,12 +5133,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2320',
-			Bitmap: []string{
+		{
+			"character": "⌠",
+			"bitmap": [
 				"---------",
 				"---------",
 				"----000--",
@@ -5156,12 +5154,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---00----",
 				"---00----",
 				"---00----",
-				"---00----",
-			},
+				"---00----"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2321',
-			Bitmap: []string{
+		{
+			"character": "⌡",
+			"bitmap": [
 				"---00----",
 				"---00----",
 				"---00----",
@@ -5177,12 +5175,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00f7',
-			Bitmap: []string{
+		{
+			"character": "÷",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -5198,12 +5196,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2248',
-			Bitmap: []string{
+		{
+			"character": "≈",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -5219,12 +5217,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00b0',
-			Bitmap: []string{
+		{
+			"character": "°",
+			"bitmap": [
 				"---------",
 				"--000----",
 				"-00-00---",
@@ -5240,12 +5238,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u2219',
-			Bitmap: []string{
+		{
+			"character": "∙",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -5261,12 +5259,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00b7',
-			Bitmap: []string{
+		{
+			"character": "·",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -5282,12 +5280,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u221a',
-			Bitmap: []string{
+		{
+			"character": "√",
+			"bitmap": [
 				"---------",
 				"----0000-",
 				"----00---",
@@ -5303,12 +5301,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u207f',
-			Bitmap: []string{
+		{
+			"character": "ⁿ",
+			"bitmap": [
 				"---------",
 				"00-00----",
 				"-00-00---",
@@ -5324,12 +5322,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00b2',
-			Bitmap: []string{
+		{
+			"character": "²",
+			"bitmap": [
 				"---------",
 				"-000-----",
 				"00-00----",
@@ -5345,12 +5343,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u25a0',
-			Bitmap: []string{
+		{
+			"character": "■",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -5366,12 +5364,12 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
+				"---------"
+			]
 		},
-		fopix.RuneInfo{
-			Character: '\u00a0',
-			Bitmap: []string{
+		{
+			"character": " ",
+			"bitmap": [
 				"---------",
 				"---------",
 				"---------",
@@ -5387,8 +5385,8 @@ var VGA_CP437 = fopix.FontInfo{
 				"---------",
 				"---------",
 				"---------",
-				"---------",
-			},
-		},
-	},
+				"---------"
+			]
+		}
+	]
 }

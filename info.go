@@ -3,33 +3,33 @@ package fopix
 import (
 	"encoding/json"
 	"errors"
-	"image"
 	"unicode/utf8"
 )
 
 type FontInfo struct {
-	Name        string
-	Author      string
-	Description string
-	Size        Size
-	AnchorPos   image.Point
-	TargetChar  Character
-	CharSet     []RuneInfo
+	Name        string     `json:"name"`
+	Author      string     `json:"author"`
+	Description string     `json:"description"`
+	Size        Point      `json:"size"`
+	AnchorPos   Point      `json:"anchor-pos"`
+	TargetChar  Character  `json:"target-char"`
+	CharSet     []RuneInfo `json:"char-set"`
 }
 
-type Size struct {
-	Dx, Dy int
+type Point struct {
+	X int `json:"x"`
+	Y int `json:"y"`
 }
 
 type RuneInfo struct {
-	Character Character
-	Bitmap    []string
+	Character Character `json:"character"`
+	Bitmap    []string  `json:"bitmap"`
 }
 
 type Character rune
 
-func (c *Character) MarshalJSON() ([]byte, error) {
-	r := rune(*c)
+func (c Character) MarshalJSON() ([]byte, error) {
+	r := rune(c)
 	if !utf8.ValidRune(r) {
 		return nil, errors.New("rune is not valid")
 	}

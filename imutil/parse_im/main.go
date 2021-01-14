@@ -8,7 +8,6 @@ import (
 	"image/color"
 	"io/ioutil"
 	"log"
-	"os"
 	"strings"
 
 	_ "image/png"
@@ -68,7 +67,7 @@ func parse() {
 		}
 	}
 
-	err = ioutil.WriteFile("result.txt", buf.Bytes(), os.ModePerm)
+	err = ioutil.WriteFile("result.txt", buf.Bytes(), 0666)
 	if err != nil {
 		log.Fatal(err)
 	}

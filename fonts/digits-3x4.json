@@ -1,20 +1,20 @@
 {
-	"Name": "Digits 3x4",
-	"Author": "",
-	"Description": "",
-	"Size": {
-		"Dx": 4,
-		"Dy": 5
+	"name": "Digits 3x4",
+	"author": "",
+	"description": "",
+	"size": {
+		"x": 4,
+		"y": 5
 	},
-	"AnchorPos": {
-		"X": 0,
-		"Y": 0
+	"anchor-pos": {
+		"x": 0,
+		"y": 0
 	},
-	"TargetChar": "0",
-	"CharSet": [
+	"target-char": "0",
+	"char-set": [
 		{
-			"Character": "0",
-			"Bitmap": [
+			"character": "0",
+			"bitmap": [
 				"000",
 				"0-0",
 				"0-0",
@@ -22,8 +22,8 @@
 			]
 		},
 		{
-			"Character": "1",
-			"Bitmap": [
+			"character": "1",
+			"bitmap": [
 				"-0-",
 				"00-",
 				"-0-",
@@ -31,8 +31,8 @@
 			]
 		},
 		{
-			"Character": "2",
-			"Bitmap": [
+			"character": "2",
+			"bitmap": [
 				"000",
 				"-00",
 				"0--",
@@ -40,8 +40,8 @@
 			]
 		},
 		{
-			"Character": "3",
-			"Bitmap": [
+			"character": "3",
+			"bitmap": [
 				"00-",
 				"-00",
 				"--0",
@@ -49,8 +49,8 @@
 			]
 		},
 		{
-			"Character": "4",
-			"Bitmap": [
+			"character": "4",
+			"bitmap": [
 				"0-0",
 				"0-0",
 				"000",
@@ -58,8 +58,8 @@
 			]
 		},
 		{
-			"Character": "5",
-			"Bitmap": [
+			"character": "5",
+			"bitmap": [
 				"000",
 				"00-",
 				"--0",
@@ -67,8 +67,8 @@
 			]
 		},
 		{
-			"Character": "6",
-			"Bitmap": [
+			"character": "6",
+			"bitmap": [
 				"-00",
 				"0--",
 				"000",
@@ -76,8 +76,8 @@
 			]
 		},
 		{
-			"Character": "7",
-			"Bitmap": [
+			"character": "7",
+			"bitmap": [
 				"000",
 				"--0",
 				"-0-",
@@ -85,8 +85,8 @@
 			]
 		},
 		{
-			"Character": "8",
-			"Bitmap": [
+			"character": "8",
+			"bitmap": [
 				"000",
 				"000",
 				"0-0",
@@ -94,8 +94,8 @@
 			]
 		},
 		{
-			"Character": "9",
-			"Bitmap": [
+			"character": "9",
+			"bitmap": [
 				"000",
 				"000",
 				"--0",

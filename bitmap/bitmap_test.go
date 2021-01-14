@@ -15,12 +15,13 @@ func TestBitmap(t *testing.T) {
 	bm := New(n)
 
 	for i := 0; i < n; i++ {
-		if err := bm.Set(i, randBool(r)); err != nil {
+		err := bm.SetBit(i, randBit(r))
+		if err != nil {
 			t.Fatal(err)
 		}
 	}
 
-	var bit, bitInvert bool
+	var bit, bitInvert uint
 	var err error
 
 	data := make([]byte, len(bm.data))
@@ -29,13 +30,13 @@ func TestBitmap(t *testing.T) {
 
 		copy(data, bm.data)
 
-		if bit, err = bm.Get(i); err != nil {
+		if bit, err = bm.GetBit(i); err != nil {
 			t.Fatal(err)
 		}
-		if err = bm.Set(i, !bit); err != nil {
+		if err = bm.SetBit(i, not(bit)); err != nil {
 			t.Fatal(err)
 		}
-		if bitInvert, err = bm.Get(i); err != nil {
+		if bitInvert, err = bm.GetBit(i); err != nil {
 			t.Fatal(err)
 		}
 
@@ -43,7 +44,7 @@ func TestBitmap(t *testing.T) {
 			t.Fatalf("wrong set invert bit for offset %d", i)
 		}
 
-		if err = bm.Set(i, bit); err != nil {
+		if err = bm.SetBit(i, bit); err != nil {
 			t.Fatal(err)
 		}
 
@@ -53,6 +54,21 @@ func TestBitmap(t *testing.T) {
 	}
 }
 
+func not(a uint) uint {
+	switch a {
+	case 0:
+		return 1
+	case 1:
+		return 0
+	default:
+		panic("invalid bit")
+	}
+}
+
 func randBool(r *rand.Rand) bool {
 	return (r.Int() & 1) == 1
+}
+
+func randBit(r *rand.Rand) uint {
+	return uint(r.Int() & 1)
 }

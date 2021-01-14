@@ -14,8 +14,8 @@ var gopherFont = fopix.FontInfo{
 	Name:        "Go font",
 	Author:      "Gopher",
 	Description: "something ...",
-	Size:        fopix.Size{Dx: 6, Dy: 7},
-	AnchorPos:   image.Point{0, 0},
+	Size:        fopix.Point{X: 6, Y: 7},
+	AnchorPos:   fopix.Point{X: 0, Y: 0},
 	TargetChar:  '0',
 	CharSet: []fopix.RuneInfo{
 		fopix.RuneInfo{
@@ -43,24 +43,28 @@ var gopherFont = fopix.FontInfo{
 	},
 }
 
-func main() {
-
-	f, err := fopix.New(gopherFont)
+func checkError(err error) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	f.Scale(10)
-	f.Color(color.RGBA{0, 0, 0xFF, 0xFF})
+}
+
+func main() {
+
+	d, err := fopix.NewDrawer(gopherFont)
+	checkError(err)
+
+	d.SetScale(10)
+	d.SetColor(color.RGBA{0, 0, 0xFF, 0xFF})
 
 	text := "Go"
 
-	m := image.NewRGBA(f.GetTextBounds(text))
+	m := image.NewRGBA(d.TextBounds(text))
 
 	imutil.ImageSolidFill(m, color.White)
 
-	f.DrawText(m, image.ZP, text)
+	d.DrawText(m, image.ZP, text)
 
-	if err = imutil.ImageSaveToPNG("go-font.png", m); err != nil {
-		log.Fatal(err)
-	}
+	err = imutil.ImageSaveToPNG("go-font.png", m)
+	checkError(err)
 }
